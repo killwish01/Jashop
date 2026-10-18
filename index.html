@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jashop.xyz | নারীদের প্রিমিয়াম জামা ও শীতের পোশাক</title>
+    
+    <!-- Google Fonts & FontAwesome 6 Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        orangeTheme: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            500: '#ff6b00',
+                            600: '#ff5100',
+                            700: '#e04400',
+                            dark: '#1e1b18'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Hind Siliguri', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #fcfcfd;
+            color: #1e1b18;
+        }
+        .modal-animate {
+            animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes modalSlideUp {
+            from { opacity: 0; transform: translateY(16px) scale(0.98); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .glass-badge {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-orangeTheme-600 via-orangeTheme-500 to-amber-500 text-white text-xs sm:text-sm py-2 px-4 text-center font-bold tracking-wide shadow-sm flex items-center justify-center gap-2">
+        <i class="fa-solid fa-bolt animate-bounce"></i>
+        <span>শীতের মেগা ডিসকাউন্ট! সারাদেশ থেকে সরাসরি অর্ডার করুন ক্যাশ অন ডেলিভারিতে।</span>
+    </div>
+
+    <!-- Header Section -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-orangeTheme-100 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-2">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-orangeTheme-500 to-orangeTheme-600 flex items-center justify-center text-white text-2xl shadow-md shadow-orangeTheme-500/20 group-hover:scale-105 transition-transform duration-300">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-black tracking-tight text-orangeTheme-600 block leading-none">Jashop<span class="text-orangeTheme-dark">.xyz</span></span>
+                    <span class="text-[10px] text-gray-500 font-bold tracking-wider uppercase">নারীদের প্রিমিয়াম ফ্যাশন</span>
+                </div>
+            </a>
+            
+            <!-- Hotline & Order Action -->
+            <div class="flex items-center gap-3">
+                <a href="tel:01700000000" class="hidden sm:flex items-center gap-2 bg-orangeTheme-50 hover:bg-orangeTheme-100 text-orangeTheme-600 border border-orangeTheme-200 px-3.5 py-2 rounded-xl text-xs font-bold transition">
+                    <i class="fa-solid fa-phone-volume text-orangeTheme-500 text-sm"></i>
+                    <span>০১৭০০-০০০০০০</span>
+                </a>
+                <button onclick="scrollToProducts()" class="bg-gradient-to-r from-orangeTheme-600 to-orangeTheme-500 text-white hover:from-orangeTheme-700 hover:to-orangeTheme-600 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold shadow-md shadow-orangeTheme-500/25 flex items-center gap-2 transition active:scale-95">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>পণ্য সমূহ</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section: 6 Products Grid -->
+    <main id="products-section" class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
+        <div class="flex items-center justify-between mb-6">
+            <div>
+                <h2 class="text-xl sm:text-2xl font-black text-orangeTheme-dark flex items-center gap-2.5">
+                    <i class="fa-solid fa-shirt text-orangeTheme-500"></i> সেরা ৬টি কালেকশন
+                </h2>
+                <p class="text-xs sm:text-sm text-gray-500">পছন্দের পোশাকে ক্লিক করে জেলা ও থানা সিলেক্ট করে সহজ অর্ডার করুন</p>
+            </div>
+            <span class="hidden sm:inline-flex items-center gap-1.5 bg-orangeTheme-100 text-orangeTheme-700 text-xs font-bold px-3 py-1 rounded-full border border-orangeTheme-200">
+                <i class="fa-solid fa-shield-check"></i> ১০০% অরিজিনাল কটন ও ভেলভেট
+            </span>
+        </div>
+
+        <!-- Product Grid Container -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6" id="product-grid">
+            <!-- Dynamic JavaScript Rendering -->
+        </div>
+    </main>
+
+    <!-- Trust Factors -->
+    <section class="bg-gradient-to-b from-white to-orangeTheme-50/50 border-y border-orangeTheme-100 my-6 py-8">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="p-4 bg-white rounded-2xl border border-orangeTheme-100 shadow-sm">
+                <i class="fa-solid fa-truck-fast text-3xl text-orangeTheme-500 mb-2"></i>
+                <h4 class="font-bold text-sm text-orangeTheme-dark">অটো ডেলিভারি চার্জ</h4>
+                <p class="text-xs text-gray-500">জেলা ও থানা সিলেক্ট করলেই অটো চার্জ হিসাব</p>
+            </div>
+            <div class="p-4 bg-white rounded-2xl border border-orangeTheme-100 shadow-sm">
+                <i class="fa-solid fa-hand-holding-dollar text-3xl text-orangeTheme-500 mb-2"></i>
+                <h4 class="font-bold text-sm text-orangeTheme-dark">ক্যাশ অন ডেলিভারি</h4>
+                <p class="text-xs text-gray-500">পণ্য হাতে পেয়ে চেক করে টাকা দিন</p>
+            </div>
+            <div class="p-4 bg-white rounded-2xl border border-orangeTheme-100 shadow-sm">
+                <i class="fa-solid fa-arrows-rotate text-3xl text-orangeTheme-500 mb-2"></i>
+                <h4 class="font-bold text-sm text-orangeTheme-dark">সহজ রিটার্ন সুবিধা</h4>
+                <p class="text-xs text-gray-500">পছন্দ না হলে সাথে সাথে রিটার্নের সুযোগ</p>
+            </div>
+            <div class="p-4 bg-white rounded-2xl border border-orangeTheme-100 shadow-sm">
+                <i class="fa-solid fa-award text-3xl text-orangeTheme-500 mb-2"></i>
+                <h4 class="font-bold text-sm text-orangeTheme-dark">সেরা ফেব্রিক্স</h4>
+                <p class="text-xs text-gray-500">মানসম্মত কাপড়ের নিশ্চয়তা</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-orangeTheme-dark text-white pt-10 pb-6 border-t-4 border-orangeTheme-500">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <div class="flex items-center gap-2 mb-3">
+                    <div class="w-9 h-9 rounded-xl bg-orangeTheme-500 flex items-center justify-center text-white text-xl">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <span class="text-2xl font-extrabold text-white">Jashop.xyz</span>
+                </div>
+                <p class="text-xs text-gray-400 leading-relaxed">
+                    Jashop.xyz বাংলাদেশের নারীদের জন্য নির্ভরযোগ্য অনলাইন ই-কমার্স শপ। থ্রি-পিস, কাপ্তান গাউন, কুর্তি এবং উন্নতমানের শীতের পোশাকের সবচেয়ে বড় ও বিশ্বস্ত কালেকশন।
+                </p>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold text-orangeTheme-500 uppercase tracking-wider mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-headset"></i> কাস্টমার সাপোর্ট
+                </h4>
+                <p class="text-xs text-gray-300 mb-2"><i class="fa-solid fa-phone text-orangeTheme-500 mr-2"></i>০১৭০০-০০০০০০ (সকাল ৯টা - রাত ১০টা)</p>
+                <p class="text-xs text-gray-300 mb-2"><i class="fa-solid fa-envelope text-orangeTheme-500 mr-2"></i>support@jashop.xyz</p>
+                <p class="text-xs text-gray-300"><i class="fa-solid fa-location-dot text-orangeTheme-500 mr-2"></i>ঢাকা, বাংলাদেশ</p>
+            </div>
+            <div>
+                <h4 class="text-sm font-bold text-orangeTheme-500 uppercase tracking-wider mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-truck-ramp-box"></i> ডেলিভারি চার্জ নীতি
+                </h4>
+                <ul class="text-xs text-gray-300 space-y-1.5">
+                    <li><i class="fa-solid fa-check text-orangeTheme-500 mr-1"></i> ঢাকা সিটি ভেতরে: ৳৭০</li>
+                    <li><i class="fa-solid fa-check text-orangeTheme-500 mr-1"></i> ঢাকা সাব-এরিয়া (সাভার, কেরানীগঞ্জ ইত্যাদি): ৳১০০</li>
+                    <li><i class="fa-solid fa-check text-orangeTheme-500 mr-1"></i> ঢাকার বাইরে যেকোনো জেলা: ৳১২০</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 pt-4 border-t border-gray-800 text-center text-xs text-gray-500">
+            &copy; ২০২৬ Jashop.xyz | সর্বস্বত্ব সংরক্ষিত।
+        </div>
+    </footer>
+
+    <!-- Interactive Order Form Modal -->
+    <div id="order-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-xs hidden items-center justify-center p-2 sm:p-4 overflow-y-auto">
+        <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden modal-animate my-auto relative border border-orangeTheme-100">
+            
+            <!-- Modal Header -->
+            <div class="bg-gradient-to-r from-orangeTheme-600 to-orangeTheme-500 text-white p-4 sm:p-5 flex items-center justify-between">
+                <h3 class="font-bold text-base sm:text-lg flex items-center gap-2.5">
+                    <i class="fa-solid fa-bag-shopping"></i> সরাসরি অর্ডার ফর্ম
+                </h3>
+                <button onclick="closeOrderModal()" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-white transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div class="p-4 sm:p-6 max-h-[85vh] overflow-y-auto">
+                <!-- Selected Product Preview -->
+                <div class="bg-orangeTheme-50/70 border border-orangeTheme-200 rounded-2xl p-3.5 sm:p-4 mb-5 flex flex-col sm:flex-row gap-4 items-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden bg-white shadow-md border border-orangeTheme-100 shrink-0">
+                        <img id="modal-product-img" src="" alt="প্রোডাক্ট" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow text-center sm:text-left">
+                        <span id="modal-product-badge" class="bg-orangeTheme-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">স্পেশাল ছাড়</span>
+                        <h4 id="modal-product-title" class="font-bold text-orangeTheme-dark text-base sm:text-lg mt-1 mb-1">প্রোডাক্ট এর নাম</h4>
+                        <div class="flex items-center justify-center sm:justify-start gap-2.5 mb-1.5">
+                            <span id="modal-product-price" class="text-xl font-extrabold text-orangeTheme-600">৳০</span>
+                            <span id="modal-product-oldprice" class="text-xs text-gray-400 line-through">৳০</span>
+                        </div>
+                        <p id="modal-product-desc" class="text-xs text-gray-600 leading-relaxed"></p>
+                    </div>
+                </div>
+
+                <form id="checkout-form" onsubmit="handleOrderSubmit(event)">
+                    <!-- Size Selector -->
+                    <div class="mb-5">
+                        <label class="block text-xs font-bold text-orangeTheme-dark uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                            <i class="fa-solid fa-ruler-horizontal text-orangeTheme-500"></i> সাইজ নির্বাচন করুন *
+                        </label>
+                        <div class="grid grid-cols-5 gap-2" id="size-options">
+                            <button type="button" onclick="selectSize('S')" class="size-btn py-2 text-xs sm:text-sm font-bold border-2 rounded-xl text-center transition border-orangeTheme-500 bg-orangeTheme-500 text-white">S</button>
+                            <button type="button" onclick="selectSize('M')" class="size-btn py-2 text-xs sm:text-sm font-bold border-2 rounded-xl text-center transition border-gray-200 text-gray-700 hover:border-orangeTheme-500">M</button>
+                            <button type="button" onclick="selectSize('L')" class="size-btn py-2 text-xs sm:text-sm font-bold border-2 rounded-xl text-center transition border-gray-200 text-gray-700 hover:border-orangeTheme-500">L</button>
+                            <button type="button" onclick="selectSize('XL')" class="size-btn py-2 text-xs sm:text-sm font-bold border-2 rounded-xl text-center transition border-gray-200 text-gray-700 hover:border-orangeTheme-500">XL</button>
+                            <button type="button" onclick="selectSize('XXL')" class="size-btn py-2 text-xs sm:text-sm font-bold border-2 rounded-xl text-center transition border-gray-200 text-gray-700 hover:border-orangeTheme-500">XXL</button>
+                        </div>
+                    </div>
+
+                    <!-- Customer Info Form -->
+                    <div class="space-y-3.5 mb-5">
+                        <h4 class="text-xs font-bold text-orangeTheme-dark uppercase tracking-wider flex items-center gap-1.5 border-b pb-2 border-gray-100">
+                            <i class="fa-solid fa-truck-ramp-box text-orangeTheme-500"></i> আপনার ডেলিভারি ও ঠিকানা দিন
+                        </h4>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">আপনার পূর্ণ নাম *</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400 text-xs"><i class="fa-solid fa-user"></i></span>
+                                    <input type="text" id="cust-name" required placeholder="উদাহরণ: ফারিহা জান্নাত" class="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:border-orangeTheme-500 focus:bg-white transition">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">১১ ডিজিটের মোবাইল নম্বর *</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400 text-xs"><i class="fa-solid fa-phone"></i></span>
+                                    <input type="tel" id="cust-phone" required pattern="[0][1][3-9][0-9]{8}" placeholder="017XXXXXXXX" class="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:border-orangeTheme-500 focus:bg-white transition">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bangladesh Dynamic 64 Districts & Thanas with AUTO delivery charge -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">জেলা নির্বাচন করুন (৬৪ জেলা) *</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400 text-xs"><i class="fa-solid fa-map-location-dot"></i></span>
+                                    <select id="cust-district" onchange="onDistrictChange()" required class="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:border-orangeTheme-500 focus:bg-white transition">
+                                        <option value="">জেলা সিলেক্ট করুন</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">থানা / উপজেলা নির্বাচন করুন *</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400 text-xs"><i class="fa-solid fa-building-flag"></i></span>
+                                    <select id="cust-thana" onchange="onThanaChange()" required class="w-full pl-9 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:border-orangeTheme-500 focus:bg-white transition">
+                                        <option value="">প্রথমে জেলা সিলেক্ট করুন</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">বিস্তারিত ঠিকানা (বাসা/রোড/গ্রাম/পাড়া) *</label>
+                            <div class="relative">
+                                <span class="absolute top-3 left-0 pl-3 text-gray-400 text-xs"><i class="fa-solid fa-house"></i></span>
+                                <textarea id="cust-address" required rows="2" placeholder="উদাহরণ: বাসা ১০, রোড ৫, ব্লকের বর্ণনা ইত্যাদি" class="w-full pl-9 pr-3 py-2 bg-gray-50 border border-gray-200 rounded-xl text-xs sm:text-sm focus:outline-none focus:border-orangeTheme-500 focus:bg-white transition"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Automatic Delivery Charge Display Box -->
+                    <div class="mb-5 bg-gradient-to-r from-orangeTheme-50 to-amber-50 p-3.5 rounded-2xl border border-orangeTheme-200 flex items-center justify-between">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-9 h-9 rounded-xl bg-orangeTheme-500 text-white flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-orangeTheme-dark" id="delivery-zone-title">স্বয়ংক্রিয় ডেলিভারি চার্জ নির্ধারণ</div>
+                                <div class="text-[11px] text-gray-500" id="delivery-zone-desc">জেলা ও থানা নির্বাচন করলে স্বয়ংক্রিয়ভাবে ডেলিভারি চার্জ যুক্ত হবে</div>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-lg font-black text-orangeTheme-600" id="detected-delivery-charge">৳০</span>
+                        </div>
+                    </div>
+
+                    <!-- Live Invoice Summary -->
+                    <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200 mb-5 space-y-2">
+                        <div class="flex justify-between text-xs text-gray-600">
+                            <span>পণ্যের মূল্য:</span>
+                            <span id="bill-product-price" class="font-bold">৳০</span>
+                        </div>
+                        <div class="flex justify-between text-xs text-gray-600">
+                            <span>অটো ডেলিভারি চার্জ:</span>
+                            <span id="bill-delivery-charge" class="font-bold text-orangeTheme-600">৳০</span>
+                        </div>
+                        <div class="border-t border-gray-200 pt-2 mt-1 flex justify-between items-center">
+                            <span class="text-sm font-bold text-orangeTheme-dark">সর্বমোট প্রদেয় বিল:</span>
+                            <span id="bill-total" class="text-2xl font-black text-orangeTheme-600">৳০</span>
+                        </div>
+                    </div>
+
+                    <!-- Confirm Button -->
+                    <button type="submit" class="w-full bg-gradient-to-r from-orangeTheme-600 to-orangeTheme-500 hover:from-orangeTheme-700 hover:to-orangeTheme-600 text-white font-extrabold py-3.5 px-4 rounded-2xl shadow-lg shadow-orangeTheme-500/30 flex items-center justify-center gap-2 text-base transition active:scale-98">
+                        <i class="fa-solid fa-circle-check text-lg"></i>
+                        <span>অর্ডার নিশ্চিত করুন</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Success Modal -->
+    <div id="success-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-xs hidden items-center justify-center p-4">
+        <div class="bg-white w-full max-w-md rounded-3xl shadow-2xl overflow-hidden modal-animate p-6 text-center border border-orangeTheme-100">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            
+            <h3 class="text-2xl font-black text-orangeTheme-dark mb-1">অর্ডার সফল হয়েছে!</h3>
+            <p class="text-xs text-gray-500 mb-4">আপনার অর্ডারটি সিস্টেমে গ্রহণ করা হয়েছে।</p>
+
+            <div class="bg-orangeTheme-50/80 rounded-2xl p-4 text-left border border-orangeTheme-100 text-xs space-y-2 mb-6">
+                <div class="flex justify-between border-b pb-1.5 border-orangeTheme-200">
+                    <span class="text-gray-500">অর্ডার নম্বর:</span>
+                    <span id="success-order-id" class="font-extrabold text-orangeTheme-600">#JASHOP-0000</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-500">গ্রাহকের নাম:</span>
+                    <span id="success-cust-name" class="font-bold text-gray-800"></span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-500">মোবাইল নম্বর:</span>
+                    <span id="success-cust-phone" class="font-bold text-gray-800"></span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-500">ঠিকানা:</span>
+                    <span id="success-cust-address" class="font-bold text-gray-800"></span>
+                </div>
+                <div class="flex justify-between border-t pt-1.5 border-orangeTheme-200">
+                    <span class="font-bold text-orangeTheme-dark">সর্বমোট বিল:</span>
+                    <span id="success-total-bill" class="font-black text-orangeTheme-600 text-base"></span>
+                </div>
+            </div>
+
+            <p class="text-xs text-gray-600 mb-5">আমাদের কাস্টমার প্রতিনিধি ডেলিভারির পূর্বে ফোন দিয়ে কনফার্ম করবেন।</p>
+
+            <button onclick="closeSuccessModal()" class="w-full bg-orangeTheme-600 hover:bg-orangeTheme-700 text-white font-bold py-3 rounded-2xl text-sm transition">
+                <i class="fa-solid fa-house mr-1"></i> হোমে ফিরে যান
+            </button>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script>
+        // 6 Featured Products List
+        const productsList = [
+            {
+                id: 101,
+                title: "প্রিমিয়াম ভেলভেট কাপ্তান গাউন",
+                price: 1250,
+                oldPrice: 1750,
+                badge: "হট সেলিং",
+                image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=600&q=80",
+                description: "উচ্চমানের ভেলভেট কাপড়ে তৈরি অত্যন্ত আরামদায়ক ও চমৎকার ফিনিশিং যুক্ত পার্টি গাউন।"
+            },
+            {
+                id: 102,
+                title: "এক্সক্লুসিভ কাশ্মীরি শাল থ্রি-পিস",
+                price: 1850,
+                oldPrice: 2400,
+                badge: "উইন্টার স্পেশাল",
+                image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=600&q=80",
+                description: "শীতের পার্টি ও অনুষ্ঠানের জন্য মানানসই গর্জিয়াস পোশাক। সাথে ম্যাচিং উন্নত কাশ্মীরি শাল।"
+            },
+            {
+                id: 103,
+                title: "সফট লিনেন উইন্টার লং কুর্তি",
+                price: 850,
+                oldPrice: 1200,
+                badge: "বিশেষ অফার",
+                image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80",
+                description: "হালকা শীতের জন্য মানানসই ও স্টাইলিশ লং কুর্তি। দৈনন্দিন ব্যবহারে নরম ও আরামদায়ক।"
+            },
+            {
+                id: 104,
+                title: "ট্রেন্ডি ফুল স্লিভ হুডি গাউন",
+                price: 1100,
+                oldPrice: 1500,
+                badge: "নতুন কালেকশন",
+                image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80",
+                description: "তরুণীদের পছন্দের আধুনিক হুডি ড্রেস। উন্নত সুতি ও উলের সংমিশ্রণে তৈরি।"
+            },
+            {
+                id: 105,
+                title: "ডিজাইনার ব্লক প্রিন্ট কটন থ্রি-পিস",
+                price: 1350,
+                oldPrice: 1800,
+                badge: "প্রিমিয়াম কটন",
+                image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=600&q=80",
+                description: "১০০% পিওর কটন ফেব্রিক্সে হ্যান্ড ব্লকের সূক্ষ্ম কাজ। সাথে সালোয়ার ও ওড়না।"
+            },
+            {
+                id: 106,
+                title: "লেডিস কার্ডিগান স্পেশাল জ্যাকেট",
+                price: 950,
+                oldPrice: 1350,
+                badge: "শীতের ট্রেন্ড",
+                image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=600&q=80",
+                description: "নরম সুতার বোনা গরম কার্ডিগান জ্যাকেট। যেকোনো ড্রেসের সাথে দারুণ মানিয়ে যায়।"
+            }
+        ];
+
+        // Dhaka Main City Thanas (৳70)
+        const dhakaCityThanas = [
+            "মিরপুর", "উত্তরা", "ধানমন্ডি", "গুলশান", "বনানী", "মোহাম্মদপুর", "শাহবাগ", "মতিঝিল", 
+            "তেজগাঁও", "পল্টন", "রমনা", "লালবাগ", "খিলগাঁও", "বাড্ডা", "বাসাবো", "যাত্রাবাড়ী", 
+            "ডেমরা", "কোতোয়ালি", "সূত্রাপুর", "হাজারীবাগ", "কফরুল", "ক্যান্টনমেন্ট", "ভাষানটেক"
+        ];
+
+        // Dhaka Suburban Thanas (৳100)
+        const dhakaSubThanas = [
+            "সাভার", "ধামরাই", "কেরানীগঞ্জ", "নবাবগঞ্জ", "দোহার"
+        ];
+
+        // All 64 Districts and detailed Thanas
+        const bdLocations = {
+            "ঢাকা": [...dhakaCityThanas, ...dhakaSubThanas],
+            "চট্টগ্রাম": ["কোতোয়ালি", "পাঁচলাইশ", "হালিশহর", "পতেঙ্গা", "হাটহাজারী", "সীতাকুণ্ড", "পটিয়া", "রাউজান", "সন্দীপ"],
+            "গাজীপুর": ["গাজীপুর সদর", "কালিয়াকৈর", "শ্রীপুর", "কাপাসিয়া", "কালীগঞ্জ"],
+            "নারায়ণগঞ্জ": ["নারায়ণগঞ্জ সদর", "সিদ্ধিরগঞ্জ", "সোনারগাঁও", "রূপগঞ্জ", "আড়াইহাজার"],
+            "সিলেট": ["সিলেট সদর", "দক্ষিণ সুরমা", "গোলাপগঞ্জ", "বীণাবাজার", "শ্রীমঙ্গল"],
+            "রাজশাহী": ["বোয়ালিয়া", "রাজপাড়া", "মতিহার", "পবা"],
+            "খুলনা": ["খুলনা সদর", "সোনাডাঙ্গা", "খালিশপুর"],
+            "বরিশাল": ["বরিশাল সদর", "কাউনিয়া", "এয়ারপোর্ট"],
+            "রংপুর": ["রংপুর সদর", "মিঠাপুকুর", "পীরগঞ্জ"],
+            "ময়মনসিংহ": ["ময়মনসিংহ সদর", "মুক্তাগাছা", "ফুলবাড়িয়া"],
+            "কুমিল্লা": ["কুমিল্লা সদর", "লাকসাম", "চৌদ্দগ্রাম"],
+            "বগুড়া": ["বগুড়া সদর", "শেরপুর", "শিবগঞ্জ"],
+            "কক্সবাজার": ["কক্সবাজার সদর", "উখিয়া", "টেকনাফ", "চকরিয়া"],
+            "যশোর": ["যশোর সদর", "ঝিকরগাছা", "শার্শা"],
+            "কুষ্টিয়া": ["কুষ্টিয়া সদর", "কুমারখালী", "ভেড়ামারা"],
+            "পাবনা": ["পাবনা সদর", "ঈশ্বরদী", "সাঁথিয়া"],
+            "দিনাজপুর": ["দিনাজপুর সদর", "ফুলবাড়ী", "বিরামপুর"],
+            "নোয়াখালী": ["নোয়াখালী সদর", "বেগমগঞ্জ", "কোম্পানীগঞ্জ"],
+            "ফেনী": ["ফেনী সদর", "দাগনভূঞা", "ছাগলনাইয়া"],
+            "টাঙ্গাইল": ["টাঙ্গাইল সদর", "মির্জাপুর", "কালিহাতী"],
+            "ফরিদপুর": ["ফরিদপুর সদর", "ভাঙ্গা", "বোয়ালমারী"]
+        };
+
+        const other64Districts = [
+            "ঝালকাঠি", "বরগুনা", "মেহেরপুর", "চুয়াডাঙ্গা", "ঝিনাইদহ", "মাগুরা", "নড়াইল", "গোপালগঞ্জ", "মাদারীপুর", 
+            "শরীয়তপুর", "রাজবাড়ী", "মানিকগঞ্জ", "মুন্সীগঞ্জ", "হবিগঞ্জ", "সুনামগঞ্জ", "মৌলভীবাজার", "জয়পুরহাট", 
+            "নওগাঁ", "নাটোর", "নবাবগঞ্জ", "কুড়িগ্রাম", "গাইবান্ধা", "নীলফামারী", "পঞ্চগড়", "ঠাকুরগাঁও", "শেরপুর", 
+            "নেত্রকোণা", "জামালপুর", "ব্রাহ্মণবাড়িয়া", "চাঁদপুর", "লক্ষ্মীপুর", "বান্দরবান", "রাঙ্গামাটি", "খাগড়াছড়ি", "পিরোজপুর", "পটুয়াখালী", "ভোলা"
+        ];
+
+        const defaultThanaList = ["সদর", "উপজেলা কেন্দ্র", "পৌরসভা এলাকা"];
+
+        let activeProduct = null;
+        let selectedSizeCode = 'S';
+        let currentDeliveryFee = 0;
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProductsGrid();
+            populateDistricts();
+        });
+
+        function scrollToProducts() {
+            document.getElementById('products-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Render 6 Products
+        function renderProductsGrid() {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = productsList.map(p => `
+                <div class="bg-white rounded-3xl overflow-hidden border border-orangeTheme-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <!-- Image Wrap -->
+                        <div class="relative w-full h-44 sm:h-56 bg-gray-100 overflow-hidden">
+                            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-2 left-2 bg-gradient-to-r from-orangeTheme-600 to-orangeTheme-500 text-white text-[10px] sm:text-xs font-bold px-2.5 py-1 rounded-full shadow-md">
+                                ${p.badge}
+                            </span>
+                        </div>
+                        
+                        <!-- Card Body -->
+                        <div class="p-3 sm:p-4">
+                            <h3 class="font-bold text-sm sm:text-base text-orangeTheme-dark line-clamp-1 mb-1 group-hover:text-orangeTheme-600 transition-colors">
+                                ${p.title}
+                            </h3>
+                            
+                            <div class="flex items-baseline gap-2 mb-3">
+                                <span class="text-base sm:text-xl font-extrabold text-orangeTheme-600">৳${p.price}</span>
+                                <span class="text-xs text-gray-400 line-through">৳${p.oldPrice}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Instant "অর্ডার করুন" Button -->
+                    <div class="p-3 pt-0">
+                        <button onclick="openOrderModal(${p.id})" class="w-full bg-gradient-to-r from-orangeTheme-600 to-orangeTheme-500 hover:from-orangeTheme-700 hover:to-orangeTheme-600 text-white font-bold py-2.5 px-3 rounded-2xl shadow-md shadow-orangeTheme-500/20 flex items-center justify-center gap-2 text-xs sm:text-sm transition active:scale-95">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>অর্ডার করুন</span>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Open Order Modal
+        function openOrderModal(productId) {
+            activeProduct = productsList.find(p => p.id === productId);
+            if (!activeProduct) return;
+
+            // Fill Modal Product Info
+            document.getElementById('modal-product-img').src = activeProduct.image;
+            document.getElementById('modal-product-title').innerText = activeProduct.title;
+            document.getElementById('modal-product-price').innerText = `৳${activeProduct.price}`;
+            document.getElementById('modal-product-oldprice').innerText = `৳${activeProduct.oldPrice}`;
+            document.getElementById('modal-product-desc').innerText = activeProduct.description;
+            document.getElementById('modal-product-badge').innerText = activeProduct.badge;
+
+            selectSize('S');
+            resetLocationAndFee();
+
+            const modal = document.getElementById('order-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        function closeOrderModal() {
+            closeModal('order-modal');
+        }
+
+        function selectSize(size) {
+            selectedSizeCode = size;
+            const sizeBtns = document.querySelectorAll('.size-btn');
+            sizeBtns.forEach(btn => {
+                if (btn.innerText === size) {
+                    btn.className = "size-btn py-2 text-xs sm:text-sm font-bold border-2 rounded-xl text-center transition border-orangeTheme-500 bg-orangeTheme-500 text-white";
+                } else {
+                    btn.className = "size-btn py-2 text-xs sm:text-sm font-bold border-2 rounded-xl text-center transition border-gray-200 text-gray-700 hover:border-orangeTheme-500";
+                }
+            });
+        }
+
+        // Populate 64 Districts
+        function populateDistricts() {
+            const districtSelect = document.getElementById('cust-district');
+            districtSelect.innerHTML = '<option value="">জেলা সিলেক্ট করুন</option>';
+
+            Object.keys(bdLocations).forEach(dist => {
+                const opt = document.createElement('option');
+                opt.value = dist;
+                opt.innerText = dist;
+                districtSelect.appendChild(opt);
+            });
+
+            other64Districts.forEach(dist => {
+                const opt = document.createElement('option');
+                opt.value = dist;
+                opt.innerText = dist;
+                districtSelect.appendChild(opt);
+            });
+        }
+
+        function resetLocationAndFee() {
+            document.getElementById('cust-district').value = "";
+            document.getElementById('cust-thana').innerHTML = '<option value="">প্রথমে জেলা সিলেক্ট করুন</option>';
+            currentDeliveryFee = 0;
+            updateDeliveryUI("জেলা ও থানা নির্বাচন করুন", "জেলা ও থানা সিলেক্ট করার সাথে সাথেই ডেলিভারি চার্জ হিসাব হবে", 0);
+        }
+
+        // Dynamic Thana populate on District Change
+        function onDistrictChange() {
+            const district = document.getElementById('cust-district').value;
+            const thanaSelect = document.getElementById('cust-thana');
+            thanaSelect.innerHTML = '<option value="">থানা / উপজেলা নির্বাচন করুন</option>';
+
+            if (!district) {
+                resetLocationAndFee();
+                return;
+            }
+
+            const thanas = bdLocations[district] || defaultThanaList;
+            thanas.forEach(thana => {
+                const opt = document.createElement('option');
+                opt.value = thana;
+                opt.innerText = thana;
+                thanaSelect.appendChild(opt);
+            });
+
+            // Calculate fee based on District
+            calculateAutoDeliveryCharge();
+        }
+
+        function onThanaChange() {
+            calculateAutoDeliveryCharge();
+        }
+
+        // Automatic Delivery Charge Calculation Logic
+        function calculateAutoDeliveryCharge() {
+            const district = document.getElementById('cust-district').value;
+            const thana = document.getElementById('cust-thana').value;
+
+            if (!district) {
+                currentDeliveryFee = 0;
+                updateDeliveryUI("জেলা সিলেক্ট করুন", "জেলা ও থানা সিলেক্ট করার সাথে সাথে ডেলিভারি চার্জ যোগ হবে", 0);
+                return;
+            }
+
+            if (district === "ঢাকা") {
+                if (thana && dhakaSubThanas.includes(thana)) {
+                    currentDeliveryFee = 100;
+                    updateDeliveryUI("ঢাকা সাব-এরিয়া ডেলিভারি", `ঢাকা (${thana}) - চার্জ ৳১০০`, 100);
+                } else if (thana && dhakaCityThanas.includes(thana)) {
+                    currentDeliveryFee = 70;
+                    updateDeliveryUI("ঢাকা সিটি ভেতরে ডেলিভারি", `ঢাকা (${thana}) - চার্জ ৳৭০`, 70);
+                } else {
+                    // Default for Dhaka if Thana not selected yet
+                    currentDeliveryFee = 70;
+                    updateDeliveryUI("ঢাকা জেলা সিলেক্টেড", "ঢাকা সিটির ভেতরে ৳৭০, সাব-এরিয়ায় ৳১০০", 70);
+                }
+            } else {
+                currentDeliveryFee = 120;
+                updateDeliveryUI("ঢাকার বাইরে / সারাদেশ", `${district} জেলা - ডেলিভারি চার্জ ৳১২০`, 120);
+            }
+
+            calculateBillSummary();
+        }
+
+        function updateDeliveryUI(title, desc, amount) {
+            document.getElementById('delivery-zone-title').innerText = title;
+            document.getElementById('delivery-zone-desc').innerText = desc;
+            document.getElementById('detected-delivery-charge').innerText = `৳${amount}`;
+        }
+
+        function calculateBillSummary() {
+            if (!activeProduct) return;
+            const total = activeProduct.price + currentDeliveryFee;
+
+            document.getElementById('bill-product-price').innerText = `৳${activeProduct.price}`;
+            document.getElementById('bill-delivery-charge').innerText = `৳${currentDeliveryFee}`;
+            document.getElementById('bill-total').innerText = `৳${total}`;
+        }
+
+        // Form Submit
+        function handleOrderSubmit(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const district = document.getElementById('cust-district').value;
+            const thana = document.getElementById('cust-thana').value;
+            const address = document.getElementById('cust-address').value;
+
+            if (!district || !thana) {
+                alert("অনুগ্রহ করে জেলা এবং থানা সিলেক্ট করুন!");
+                return;
+            }
+
+            const totalBill = activeProduct.price + currentDeliveryFee;
+            const orderId = "#JASHOP-" + Math.floor(1000 + Math.random() * 9000);
+
+            // Populate Confirmation Modal
+            document.getElementById('success-order-id').innerText = orderId;
+            document.getElementById('success-cust-name').innerText = name;
+            document.getElementById('success-cust-phone').innerText = phone;
+            document.getElementById('success-cust-address').innerText = `${address}, ${thana}, ${district}`;
+            document.getElementById('success-total-bill').innerText = `৳${totalBill}`;
+
+            closeOrderModal();
+            
+            const successModal = document.getElementById('success-modal');
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            
+            document.getElementById('checkout-form').reset();
+        }
+
+        function closeSuccessModal() {
+            closeModal('success-modal');
+        }
+    </script>
+</body>
+</html>
