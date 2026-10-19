@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -6,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ja dream collection | নারীদের প্রিমিয়াম জামা ও শীতের পোশাক</title>
     
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1794752661762158');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1794752661762158&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <!-- Google Fonts & FontAwesome 6 Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -404,7 +421,7 @@
                 oldPrice: 1250,
                 badge: "হট সেলিং",
                 image: "https://shopbasebd.com/public/uploads/shop/products/1746281247_L_2.jpg",
-                description: "Digital Print Two Piece থাই মাইক্রো জর্জেট কাপড়ের ডিজিটাল প্রিন্ট রেডিমেড টু পিস। কামিজঃ থাই মাইক্রো জর্জেট। সালোয়ারঃ থাই মাইক্রো জর্জেট। কামিজ লং ৩৮ ইঞ্চি। প্যান্ট লং ৩৯ ইঞ্চি। বডি সাইজঃ L=36-38, XL=40-42, XXL=44-46।"
+                description: "Digital Print Two Piece থাই মাইক্রো জর্জেট কাপড়ের ডিজিটাল প্রিন্ট রেডিমেড টু পিস। কামিজঃ থাই মাইক্রো জর্জেট। সালোয়ারঃ থাই মাইক্রো জর্জেট। কামিজ লং ৩৮ ইঞ্চি। প্যান্ট লং ৩৯ ইঞ্চি। বডি সাইজঃ L=36-38, XL=40-42, XXL=44-46。"
             },
             {
                 id: 102,
@@ -413,7 +430,7 @@
                 oldPrice: 1200,
                 badge: "Hot sell",
                 image: "https://shopbasebd.com/public/uploads/shop/products/1790250943_L_1.jpeg",
-                description: "Printed Cotton Two Pieceপিওর স্লাব কটন ফেব্রিক্সে প্রিমিয়াম স্কিন প্রিন্ট অ্যান্ড লেইস লাগানো রেডিমেড টুপিস।আরামদায়ক ফ্যাব্রিক ও সিম্পল এলিগেন্ট ডিজাইনের এই থ্রী পিসটি দৈনন্দিন ও যেকোনো আয়োজনে পরার জন্য উপযোগী।প্রোডাক্ট ডিটেইলসঃকামিজঃ স্লাব কটন ফেব্রিক্স।প্রিমিয়াম স্কিন প্রিন্ট অ্যান্ড লেইস লাগানো।কামিজ লংঃ ৩২ ইঞ্চি। বডি সাইজ ৩৬ থেকে ৪৪ পর্যন্ত।প্যান্টঃ কটন চেক ফেব্রিক্স।প্যান্টের কোমর সাইজ ফ্রী লং ৪০ ইঞ্চি।Size Measurement:M = 36-38XL = 40-42 XXL = 44-46।"
+                description: "Printed Cotton Two Pieceপিওর স্লাব কটন ফেব্রিক্সে প্রিমিয়াম স্কিন প্রিন্ট অ্যান্ড লেইস লাগানো রেডিমেড টুপিস।আরামদায়ক ফ্যাব্রিক ও সিম্পল এলিগেন্ট ডিজাইনের এই থ্রী পিসটি দৈনন্দিন ও যেকোনো আয়োজনে পরার জন্য উপযোগী।প্রোডাক্ট ডিটেইলসঃকামিজঃ স্লাব কটন ফেব্রিক্স।প্রিমিয়াম স্কিন প্রিন্ট অ্যান্ড লেইস লাগানো।কামিজ লংঃ ৩২ ইঞ্চি। বডি সাইজ ৩৬ থেকে ৪৪ পর্যন্ত।প্যান্টঃ কটন চেক ফেব্রিক্স।প্যান্টের কোমর সাইজ ফ্রী লং ৪০ ইঞ্চি।Size Measurement:M = 36-38XL = 40-42 XXL = 44-46。"
             },
             {
                 id: 103,
@@ -554,6 +571,24 @@
         function openOrderModal(productId) {
             activeProduct = productsList.find(p => p.id === productId);
             if (!activeProduct) return;
+
+            // Meta Pixel: ViewContent & InitiateCheckout Event Tracking
+            if (typeof fbq === 'function') {
+                fbq('track', 'ViewContent', {
+                    content_name: activeProduct.title,
+                    content_ids: [activeProduct.id],
+                    content_type: 'product',
+                    value: activeProduct.price,
+                    currency: 'BDT'
+                });
+                fbq('track', 'InitiateCheckout', {
+                    content_name: activeProduct.title,
+                    content_ids: [activeProduct.id],
+                    content_type: 'product',
+                    value: activeProduct.price,
+                    currency: 'BDT'
+                });
+            }
 
             // Fill Modal Product Info
             document.getElementById('modal-product-img').src = activeProduct.image;
@@ -776,6 +811,17 @@
 
             const totalBill = activeProduct.price + currentDeliveryFee;
             const orderId = "#JADREAM-" + Math.floor(1000 + Math.random() * 9000);
+
+            // Meta Pixel: Purchase Event Tracking
+            if (typeof fbq === 'function') {
+                fbq('track', 'Purchase', {
+                    content_name: activeProduct.title,
+                    content_ids: [activeProduct.id],
+                    content_type: 'product',
+                    value: totalBill,
+                    currency: 'BDT'
+                });
+            }
 
             const orderData = {
                 orderId: orderId,
